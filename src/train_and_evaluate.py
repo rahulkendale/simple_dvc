@@ -45,7 +45,7 @@ def train_and_evaluate(config_path):
     test_x = test.drop(target, axis=1)
 ##################MLFLOW#########################################
     mlflow_config = config["mlflow_config"]
-    remote_server_uri = mlflow config["remote_server_url"]
+    remote_server_uri = mlflow_config["remote_server_url"]
     mlflow.set_tracking_uri(remote_server_uri)
 
     mlflow.set_experiment(mlflow_config["experiment_name"])
